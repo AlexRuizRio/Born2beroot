@@ -31,8 +31,20 @@ SELinux (Security-Enhanced Linux) y AppArmor son dos sistemas de seguridad para 
 SELinux: Es un sistema de seguridad basado en políticas que implementa un modelo de control de acceso obligatorio (MAC). Utiliza un modelo basado en etiquetas (labels) para controlar el acceso de los procesos a los recursos del sistema. Es más flexible y granular, permitiendo políticas de seguridad detalladas, pero es más complejo de configurar y mantener. Se usa principalmente en distribuciones como Red Hat, Fedora y CentOS.
 
 AppArmor: Funciona con un enfoque más simple, utilizando perfiles basados en rutas de archivos para controlar el acceso de las aplicaciones. Es más fácil de usar y configurar, con menor impacto en el rendimiento, pero menos flexible y granular que SELinux. Viene habilitado por defecto en distribuciones como Ubuntu y Debian.
+
 Dado que mi sistema operativo es Debian deberia venir instalado, por lo que para verificar que este instaladoy se inicie automaticamente utilizaremos el siguiente comando:
 ```bash
 systemctl status apparmor
 ```
+
+## Servicio SSH
+
+SSH (Secure Shell) es un protocolo de red que permite a los usuarios conectarse de forma segura a otro ordenador a través de una red, como Internet, que puede no estar completamente asegurada. Se utiliza principalmente para acceder de forma remota a sistemas y ejecutar comandos, así como para transferir archivos de manera segura. Un resumen sencillo de cómo funciona SSH:
+
+Conexión: El cliente SSH inicia una conexión al servidor SSH remoto a través del puerto 22.
+Autenticación: El cliente y el servidor se autentican mutuamente usando claves criptográficas o contraseñas.
+Cifrado: Una vez autenticado, se establece un canal de comunicación cifrado, asegurando que toda la información esté protegida contra interceptaciones.
+Sesión: El cliente puede ejecutar comandos en el servidor remoto, transferir archivos y realizar otras tareas, todo a través de la conexión segura.
+Interacción: Todo el tráfico entre el cliente y el servidor está encriptado, garantizando la privacidad y seguridad de la información transmitida.
+
 
