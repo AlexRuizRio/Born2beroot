@@ -37,6 +37,7 @@ Dado que mi sistema operativo es Debian deberia venir instalado, por lo que para
 systemctl status apparmor
 ```
 
+
 ## Servicio SSH
 
 SSH (Secure Shell) es un protocolo de red que permite a los usuarios conectarse de forma segura a otro ordenador a través de una red, como Internet, que puede no estar completamente asegurada. Se utiliza principalmente para acceder de forma remota a sistemas y ejecutar comandos, así como para transferir archivos de manera segura. Un resumen sencillo de cómo funciona SSH:
@@ -57,10 +58,34 @@ Para coloborar que este servicio este en funcionamiento podemos ejecutar:
 sudo service ssh status
 ```
 
-Y en el caso de que queramos cambiar la configuracion del servicio SSH, modificaremos el siguiente archivo:
+Y en el caso de que queramos cambiar la configuracion del servicio SSH, tenemos 2 archivos a modificar. En el caso de queramos cambiar algo de la configuracion del cliente SSH modificaremos este archivo:
+
+```bash
+sudo nano /etc/ssh/ssh_config
+```
+Y si queremos cambiar la configuracion del servidor SSH seria este archivo:
 
 ```bash
 sudo nano /etc/ssh/sshd_config
 ```
 
 
+## Firewall UFW
+UFW (Uncomplicated Firewall) es una herramienta de configuración de firewall en sistemas basados en Linux, especialmente diseñada para facilitar la administración de reglas de firewall para usuarios que no son expertos en seguridad de redes. UFW simplifica la gestión de reglas de firewall y permite a los usuarios controlar el acceso a servicios y puertos de manera más sencilla.
+Para comprobar que el servicio este activo:
+
+```bash
+sudo ufw status
+```
+
+Para que nuestro firewall peremita las conexiones utilizaremos:
+
+```bash
+sudo ufw allow 4242
+```
+
+Y si lo queremos eliminar añadiendo numbered al comando sudo ufw status saldran unos numeros al principio de cada regla, asi que pordemos utilizar este comando poniendo el numero como parametro:
+
+```bash
+sudo ufw delete 1
+```
