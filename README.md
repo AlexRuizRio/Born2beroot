@@ -22,3 +22,13 @@ La interfaz **apt** es mas sencilla y directa. Proporcionando un conjunto de com
 
 En **aptitude** tiene un interfaz mas interactiva y amigable. Proporcionando características adicionales como por ejemplo: navegar por los paquetes, ver dependencias, resolver conflictos...
 Por ultimo **aptitude** si que cuenta con un historial completo de las acciones realizadas.
+
+
+## Que son SELinux y AppArmor
+
+SELinux (Security-Enhanced Linux) y AppArmor son dos sistemas de seguridad para el control de acceso obligatorio en Linux, que ayudan a restringir lo que los procesos pueden hacer en el sistema.
+
+SELinux: Es un sistema de seguridad basado en políticas que implementa un modelo de control de acceso obligatorio (MAC). Utiliza un modelo basado en etiquetas (labels) para controlar el acceso de los procesos a los recursos del sistema. Es más flexible y granular, permitiendo políticas de seguridad detalladas, pero es más complejo de configurar y mantener. Se usa principalmente en distribuciones como Red Hat, Fedora y CentOS.
+
+AppArmor: Funciona con un enfoque más simple, utilizando perfiles basados en rutas de archivos para controlar el acceso de las aplicaciones. Es más fácil de usar y configurar, con menor impacto en el rendimiento, pero menos flexible y granular que SELinux. Viene habilitado por defecto en distribuciones como Ubuntu y Debian.
+Dado que mi sistema operativo es Debian deberia venir instalado, por lo que para verificar que este instaladoy se inicie automaticamente utilizaremos el siguiente comando:
