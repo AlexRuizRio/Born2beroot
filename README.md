@@ -32,3 +32,7 @@ SELinux: Es un sistema de seguridad basado en políticas que implementa un model
 
 AppArmor: Funciona con un enfoque más simple, utilizando perfiles basados en rutas de archivos para controlar el acceso de las aplicaciones. Es más fácil de usar y configurar, con menor impacto en el rendimiento, pero menos flexible y granular que SELinux. Viene habilitado por defecto en distribuciones como Ubuntu y Debian.
 Dado que mi sistema operativo es Debian deberia venir instalado, por lo que para verificar que este instaladoy se inicie automaticamente utilizaremos el siguiente comando:
+```bash
+systemctl status apparmor
+```
+
