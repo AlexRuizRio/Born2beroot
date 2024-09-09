@@ -41,14 +41,26 @@ systemctl status apparmor
 
 SSH (Secure Shell) es un protocolo de red que permite a los usuarios conectarse de forma segura a otro ordenador a través de una red, como Internet, que puede no estar completamente asegurada. Se utiliza principalmente para acceder de forma remota a sistemas y ejecutar comandos, así como para transferir archivos de manera segura. Un resumen sencillo de cómo funciona SSH:
 
-Conexión: El cliente SSH inicia una conexión al servidor SSH remoto a través del puerto 22.
+1 Conexión: El cliente SSH inicia una conexión al servidor SSH remoto a través del puerto 22.
 
-Autenticación: El cliente y el servidor se autentican mutuamente usando claves criptográficas o contraseñas.
+2 Autenticación: El cliente y el servidor se autentican mutuamente usando claves criptográficas o contraseñas.
 
-Cifrado: Una vez autenticado, se establece un canal de comunicación cifrado, asegurando que toda la información esté protegida contra interceptaciones.
+3 Cifrado: Una vez autenticado, se establece un canal de comunicación cifrado, asegurando que toda la información esté protegida contra interceptaciones.
 
-Sesión: El cliente puede ejecutar comandos en el servidor remoto, transferir archivos y realizar otras tareas, todo a través de la conexión segura.
+4 Sesión: El cliente puede ejecutar comandos en el servidor remoto, transferir archivos y realizar otras tareas, todo a través de la conexión segura.
 
-Interacción: Todo el tráfico entre el cliente y el servidor está encriptado, garantizando la privacidad y seguridad de la información transmitida.
+5 Interacción: Todo el tráfico entre el cliente y el servidor está encriptado, garantizando la privacidad y seguridad de la información transmitida.
+
+Para coloborar que este servicio este en funcionamiento podemos ejecutar:
+
+```bash
+sudo service ssh status
+```
+
+Y en el caso de que queramos cambiar la configuracion del servicio SSH, modificaremos el siguiente archivo:
+
+```bash
+sudo nano /etc/ssh/sshd_config
+```
 
 
