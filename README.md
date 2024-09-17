@@ -68,7 +68,11 @@ Y si queremos cambiar la configuracion del servidor SSH seria este archivo:
 ```bash
 sudo nano /etc/ssh/sshd_config
 ```
+En el caso de que me quiera conectar desde la termnal del pc anfitrion pondremos en la terminal de dicho ordenador:
 
+```bash
+ssh gemartin@localhost -p 4343
+```
 
 ## Firewall UFW
 UFW (Uncomplicated Firewall) es una herramienta de configuración de firewall en sistemas basados en Linux, especialmente diseñada para facilitar la administración de reglas de firewall para usuarios que no son expertos en seguridad de redes. UFW simplifica la gestión de reglas de firewall y permite a los usuarios controlar el acceso a servicios y puertos de manera más sencilla.
